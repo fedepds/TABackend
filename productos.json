@@ -1,0 +1,107 @@
+[
+    {
+      "nombre": "Coca Cola",
+      "precio": "240$",
+      "descripcion": "Botella de coca cola de 3 litros, ideal para compartir en familia",
+      "imagen": "/WebProductos/ImagenesProductos/CocaColaBotella.jpg",
+      "alt": "Botella de Coca Cola",
+      "categoria": "Bebidas"
+    },
+    {
+      "nombre": "Churrascos",
+      "precio": "800$",
+      "descripcion": "120g 3 Unidades de churrascos, ideal para los asados en familia",
+      "imagen": "/WebProductos/ImagenesProductos/Churrascos.jpg",
+      "alt": "120g, 3 unidades de churrascos en bolsa",
+      "categoria": "Carnes"
+    },
+    {
+      "nombre": "Dulce De Leche",
+      "precio": "1200$",
+      "descripcion": "Dulce de leche La Serenisima importado Argentino",
+      "imagen": "/WebProductos/ImagenesProductos/DulceDeLeche.jpg",
+      "alt": "Dulce de leche La Serenisima importado Argentino",
+      "categoria": "Dulces"
+    },
+    {
+      "nombre": "Manzanas Rojas",
+      "precio": "89$ Kilo",
+      "descripcion": "Manzanas Rojas de excelente calidad",
+      "imagen": "/WebProductos/ImagenesProductos/ManzanasRojas.jpg",
+      "alt": "Manzanas Rojas",
+      "categoria": "Frutas"
+    },
+    {
+      "nombre": "Peras",
+      "precio": "100$ Kilo",
+      "descripcion": "Peras de excelente calidad",
+      "imagen": "/WebProductos/ImagenesProductos/Peras.jpg",
+      "alt": "Peras",
+      "categoria": "Frutas"
+    },
+    {
+      "nombre": "Sandias",
+      "precio": "200$ C/U",
+      "descripcion": "Sandias enteras de excelente calidad",
+      "imagen": "/WebProductos/ImagenesProductos/Sandias.jpg",
+      "alt": "Sandias",
+      "categoria": "Frutas"
+    },
+    {
+        "nombre": "Agua Mineral",
+        "precio": "150$",
+        "descripcion": "Botella de agua mineral de 2 litros, sin gas",
+        "imagen": "/WebProductos/ImagenesProductos/agua.jpg",
+        "alt": "Botella de agua mineral",
+        "categoria": "Bebidas"
+      },
+      {
+        "nombre": "Cerveza",
+        "precio": "550$",
+        "descripcion": "Lata de cerveza de 1 litro, ideal para compartir en familia",
+        "imagen": "/WebProductos/ImagenesProductos/cerveza.jpg",
+        "alt": "Lata de cerveza",
+        "categoria": "Bebidas"
+      },
+      {
+        "nombre": "Vino",
+        "precio": "1000$",
+        "descripcion": "Botella de vino de 1 litro, ideal para compartir en familia",
+        "imagen": "/WebProductos/ImagenesProductos/vino.jpg",
+        "alt": "Botella de vino",
+        "categoria": "Bebidas"
+      },
+      {
+        "nombre": "Mandarinas",
+        "precio": "50$ Kilo",
+        "descripcion": "Mandarinas de excelente calidad",
+        "imagen": "/WebProductos/ImagenesProductos/mandarina.jpg",
+        "alt": "Mandarinas",
+        "categoria": "Frutas"
+      },
+      {
+        "nombre": "Milannesa de pollo",
+        "precio": "280$",
+        "descripcion": "Milanesa de pollo de 1 kilo, ideal para compartir en familia",
+        "imagen": "/WebProductos/ImagenesProductos/milanesa.jpg",
+        "alt": "Milanesa de pollo",
+        "categoria": "Carnes"
+      },
+      {
+        "nombre": "Bananas",
+        "precio": "70$ Kilo",
+        "descripcion": "Bananas de excelente calidad",
+        "imagen": "/WebProductos/ImagenesProductos/bananas.jpg",
+        "alt": "Bananas",
+        "categoria": "Frutas"
+      }, 
+      {
+        "nombre": "Limones",
+        "precio": "30$ Kilo",
+        "descripcion": "Limones de excelente calidad",
+        "imagen": "/WebProductos/ImagenesProductos/limones.jpg",
+        "alt": "Limones",
+        "categoria": "Frutas"
+      }
+  ]
+  

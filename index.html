@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Almacen de Tito</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" type="module"></script>
+    <script src="cart.js" type="module"></script>
+    <script src="apiservice.js" type="module"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="section">
+            <h1 class="title is-1" id="titulo_almacen">Almacen del tito</h1>
+            <div class="container_input_dropdown">
+                <div class="field">
+                    <div class="control">
+                        <input id="searchInput" class="input" type="text" placeholder="Ingrese nombre del producto">
+                    </div>
+                </div>
+                 <!--Dropdown Filtros-->
+                <div class="dropdown">
+                    <div class="dropdown-trigger">
+                        <button class="button" id="dropdown_button" aria-haspopup="true" aria-controls="dropdown-menu">
+                            <span>Filtrar Productos</span>
+                        </button>
+                    </div>
+                    <div class="dropdown-menu" id="dropdown-menu" role="menu">
+                        <div class="dropdown-content">
+                            <a  class="dropdown-item " id="boton_default">Default</a>
+                            <a  class="dropdown-item" id="boton_menor_precio">Menor precio</a>
+                            <a  class="dropdown-item" id="boton_mayor_precio">Mayor precio</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Dropdown Categorías-->
+                <div class="dropdown">
+                    <div class="dropdown-trigger">
+                        <button class="button" id="dropdown_button_category" aria-haspopup="true" aria-controls="dropdown-menu-categorias">
+                            <span>Filtrar por Categoría</span>
+                        </button>
+                    </div>
+                    <div class="dropdown-menu" id="dropdown-menu-category" role="menu">
+                        <div class="dropdown-content" id="dropdown-content-category">
+                            <!-- Aquí se añadirán las categorías dinámicamente -->
+                        </div>
+                    </div>
+                </div>
+
+                    <button id="open_Modal_Button" class="button is-primary">Crear Producto</button>
+                    <!--Fede es tu trabajo!-->
+                    
+                    <!--Modal Crear producto-->
+                    <div class="modal" id="product_Modal">
+                        <div class="modal-background"></div>
+                        <div class="modal-card">
+                          <section class="modal-card-body">
+                            <div class="modal_container">
+                                <h3 id="title_modal">Crear Producto</h3>
+                            </div>
+                            
+
+
+
+
+
+
+
+
+
+                            <form action="" id="form_crear_productos">
+                                <div class="field">
+                                    <label class="label">Nombre</label>
+                                    <div class="control">
+                                      <input class="input" type="text" placeholder="Nombre del producto" id="assignedTo">
+                                    </div>
+                                  </div>
+                                  <div class="field">
+                                    <label class="label">Titulo</label>
+                                    <div class="control">
+                                      <input class="input" type="text" placeholder="Precio del Producto" id="title">
+                                    </div>
+                                  </div>
+                                  <div class="field">
+                                    <label class="label">Descripcion</label>
+                                    <div class="control">
+                                        <textarea class="textarea" placeholder="Descripcion del Producto" id="description"></textarea>
+                                    </div>
+                                  </div>
+                                  <div class="field">
+                                    <label class="label">startDate</label>
+                                    <div class="control">
+                                      <input class="input" type="text" placeholder="Nombre del producto" id="startDate">
+                                    </div>
+                                  </div>
+                                  <div class="field">
+                                    <label class="label">endDate</label>
+                                    <div class="control">
+                                      <input class="input" type="text" placeholder="Nombre del producto" id="endDate">
+                                    </div>
+                                  </div>
+
+                                  <div class="field">
+                                    <label class="label">status</label>
+                                    <div class="control">
+                                      <input class="input" type="text" placeholder="Nombre del producto" id="status">
+                                    </div>
+                                  </div>
+                                  <div class="field">
+                                    <label class="label">priority</label>
+                                    <div class="control">
+                                      <input class="input" type="text" placeholder="Nombre del producto" id="priority">
+                                    </div>
+                                  </div>
+                                  <div class="field">
+                                    <label class="label">comments</label>
+                                    <div class="control">
+                                      <input class="input" type="text" placeholder="Nombre del producto" id="comments">
+                                    </div>
+                                  </div>
+
+
+                            </form>
+                        </section>
+                          <footer class="modal-card-foot">
+                            <div class="buttons">
+                              <button class="button is-success" id="button_crear_producto">Guardar</button>
+                              <button class="button" id="cancel_Modal_Button">Cancelar</button>
+                            </div>
+                          </footer>
+                        </div>
+                      </div>
+
+            <!-- Carrito de compras -->
+            <button class="btnCart" id="btnCart">
+                <img src="/OtrasImagenes/shopping-cart.png" width="40px">
+            </button>
+
+            </div>
+
+        </div>
+
+        
+        <div class="productos">
+            <div id="productList" class="columns is-multiline">
+                <!-- Productos se mostrarán aquí -->
+            </div>
+            <div id="productsCart" class="hidden">
+                <h1 class="title" id="titulo_carrito">Carrito de compras</h1>
+                <div id="cartList">
+                   
+  <!-- Productos del carrito se mostrarán aquí -->
+                </div>
+                <div id="priceCart">
+                    <p class="title is-4">Total: <span id="totalCart"></span></p>
+                </div>
+                <footer id="footerCart">
+                    <div class="columns">
+                        <div class="column">
+                            <button class="button is-primary" id="btnBuy">Comprar</button>
+                        </div>
+                        <div class="column">
+                            <button class="button is-danger" id="btnEmpty">Vaciar</button>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+            <div id="noResults" class="has-text-centered is-hidden">
+                <p class="title">Producto no encontrado</p>
+            </div>
+        </div>    
+    </div>
+    <!-- Modal para ver detalles del producto -->
+    <div id="productModal" class="modal">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+            <header class="modal-card-head">
+                <p class="modal-card-title" id="modal-product-name">Product Name</p>
+                <button class="delete" aria-label="close"></button>
+            </header>
+            <section class="modal-card-body">
+                <figure class="image is-4by3">
+                    <img id="modal-product-image" src="" alt="Product Image">
+                </figure>
+                <p id="modal-product-description">Product Description</p>
+                <p id="modal-product-price" class="is-size-4 has-text-weight-bold">$0</p>
+            </section>
+            <footer class="modal-card-foot">
+                <button class="button" id="modal-close-button">Close</button>
+            </footer>
+        </div>
+    </div>
+    
+</body>
+
+</html>
